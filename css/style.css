@@ -745,25 +745,23 @@ a { text-decoration: none; color: inherit; transition: color var(--transition); 
 ============================================================ */
 .testimonials-section { background: linear-gradient(135deg, #f0f6ff 0%, var(--light-bg) 100%); }
 
-.testi-modern-wrap { position: relative; }
+.testi-modern-wrap {
+  position: relative;
+  overflow: hidden;   /* ✅ Move it here */
+  width: 100%;
+}
 
 .testi-track {
   display: flex;
-  overflow: hidden;
-  border-radius: var(--radius);
+  transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
+  will-change: transform;
 }
 
 .testi-modern-card {
+  flex: 0 0 100%;
+  width: 100%;
   min-width: 100%;
-  background: var(--white);
-  border-radius: var(--radius);
-  padding: 52px 56px;
-  box-shadow: var(--shadow-md);
-  border: 1px solid var(--border);
-  position: relative;
-  overflow: hidden;
-  transition: transform 0.55s cubic-bezier(0.4,0,0.2,1);
-  flex-shrink: 0;
+  box-sizing: border-box;
 }
 
 .testi-stars {

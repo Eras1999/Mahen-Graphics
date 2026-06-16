@@ -885,8 +885,20 @@ a { text-decoration: none; color: inherit; transition: color var(--transition); 
 .contact-info-item strong { display: block; font-family: 'Poppins', sans-serif; font-weight: 600; font-size: 0.92rem; margin-bottom: 4px; }
 .contact-info-item p { margin: 0; font-size: 0.9rem; color: var(--muted-text); line-height: 1.6; }
 
-.map-placeholder { background: var(--primary-light); border: 2px dashed rgba(10,94,176,0.2); border-radius: var(--radius-sm); height: 160px; display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--primary); gap: 10px; }
-.map-placeholder i { font-size: 2.2rem; opacity: 0.5; }
+.map-placeholder {
+  width: 100%;
+  height: 450px; /* Change to your preferred height */
+  border-radius: 16px;
+  overflow: hidden;
+  border: none;
+  padding: 0;
+}
+
+.map-placeholder iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
 .map-placeholder p { font-size: 0.85rem; color: var(--muted-text); margin: 0; }
 
 /* ============================================================ FOOTER */
